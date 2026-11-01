@@ -1,0 +1,111 @@
+/* ============================================
+   QUIZ PAGE STYLES
+   ============================================ */
+
+.quiz-page {
+  padding: 2rem 0 3rem;
+  min-height: calc(100vh - 64px);
+}
+
+/* Loading */
+.quiz-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 1rem;
+  color: var(--text-secondary);
+}
+
+.quiz-loading__spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--gold-400);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error */
+.quiz-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 1rem;
+  text-align: center;
+}
+
+.quiz-error__icon {
+  font-size: 3rem;
+}
+
+.quiz-error__text {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 400px;
+}
+
+/* Progress Bar */
+.quiz-progress {
+  margin-bottom: 2rem;
+}
+
+.quiz-progress__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-progress__current {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold-400);
+}
+
+.quiz-progress__topic {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--bg-glass);
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-sm);
+}
+
+.quiz-progress__bar {
+  height: 6px;
+  background: var(--bg-glass);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.quiz-progress__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-500), var(--gold-400));
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+/* Navigation */
+.quiz-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .quiz-page {
+    padding: 1rem 0 2rem;
+  }
+
+  .quiz-nav .btn--lg {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,219 @@
+/* ============================================
+   EXAM PAGE STYLES
+   ============================================ */
+
+.exam-page {
+  padding: 2rem 0 3.5rem;
+  min-height: calc(100vh - 64px);
+}
+
+/* Exam Setup */
+.exam-setup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.exam-setup__card {
+  position: relative;
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.exam-setup__pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.exam-setup__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.exam-setup__icon {
+  font-size: 3rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.exam-setup__title {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.exam-setup__desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.exam-setup__group {
+  margin-bottom: 1.75rem;
+}
+
+.exam-setup__label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.exam-setup__presets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.exam-preset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+}
+
+.exam-preset:hover {
+  border-color: var(--gold-400);
+  background: rgba(251, 191, 36, 0.05);
+  transform: translateY(-2px);
+}
+
+.exam-preset--active {
+  border-color: var(--gold-400);
+  background: rgba(251, 191, 36, 0.12);
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.15);
+}
+
+.exam-preset__count {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--gold-400);
+  line-height: 1.1;
+}
+
+.exam-preset__label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.exam-preset__time {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-sm);
+}
+
+.exam-setup__available {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.exam-setup__available strong {
+  color: var(--gold-400);
+}
+
+.exam-setup__warning {
+  color: var(--gold-500);
+  font-size: 0.85rem;
+}
+
+.exam-setup__error {
+  color: var(--error);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.exam-setup__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.exam-setup__notice {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Exam Active State */
+.exam-topbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.exam-timer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gold-400);
+  flex-shrink: 0;
+}
+
+.exam-timer--warning {
+  border-color: var(--error);
+  color: var(--error);
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { opacity: 0.7; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1.02); }
+}
+
+.exam-timer__icon {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 640px) {
+  .exam-setup__card {
+    padding: 1.5rem 1rem;
+  }
+  .exam-setup__presets {
+    gap: 0.5rem;
+  }
+  .exam-topbar {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .exam-timer {
+    justify-content: center;
+  }
+}
+
