@@ -1,6 +1,15 @@
 // Namunaviy savollar — demo uchun tayyorlangan
 // Yangi savollar qo'shish uchun shu formatda davom eting
 
+import { grade5SupplementalQuestions } from './grade5SupplementalQuestions.js'
+import { grade5SupplementalQuestions2 } from './grade5SupplementalQuestions2.js'
+import { grade6SupplementalQuestions } from './grade6SupplementalQuestions.js'
+import { grade7SupplementalQuestions } from './grade7SupplementalQuestions.js'
+import { additionalQuestions } from './additionalQuestions.js'
+import { additionalQuestions56 } from './additionalQuestions56.js'
+import { additionalQuestions78 } from './additionalQuestions78.js'
+import { additionalQuestions911 } from './additionalQuestions911.js'
+
 export const questions = [
   // ===== 5-SINF: O'ZBEKISTON TARIXI =====
   {
@@ -4894,8 +4903,83 @@ questions.push(
     variantlar: ['A) Yevropada tinchlik, yarashuv va demokratiyani rivojlantirishdagi hissasi uchun', 'B) Birinchi sun’iy yo‘ldoshni uchirgani uchun', 'C) Jahon Savdo Tashkilotini tuzgani uchun'],
     togriJavob: 0,
     izoh: 'Nobel qo‘mitasi Yevropa Ittifoqini Yevropada tinchlik, yarashuv, demokratiya va inson huquqlarini rivojlantirgani uchun taqdirlagan.'
+  },
+  {
+    id: 1035,
+    sinf: 8,
+    bolim: 'jahon',
+    mavzu: 'Sanoat inqilobi',
+    qiyinlik: 'orta',
+    savol: 'XIX asr boshidagi Angliyada Ludditlar harakati vakillari asosan nimaga qarshi chiqqan?',
+    variantlar: ['A) Yangi to‘qimachilik mashinalarining keng qo‘llanishiga', 'B) Temiryo‘l qurilishining kengayishiga', 'C) Savdo kemalarining okeanlarda suzishiga'],
+    togriJavob: 0,
+    izoh: 'Ludditlar yangi to‘qimachilik mashinalari ish o‘rinlariga tahdid soladi deb hisoblab, ayrim mashinalarni buzgan.'
+  },
+  {
+    id: 1036,
+    sinf: 8,
+    bolim: 'jahon',
+    mavzu: 'Sanoat inqilobi',
+    qiyinlik: 'oson',
+    savol: '1851-yilda Londonda o‘tkazilgan Buyuk ko‘rgazmada asosan nimalar namoyish etilgan?',
+    variantlar: ['A) Qadimgi Misr maqbaralari', 'B) Sanoat, fan va texnika yutuqlari', 'C) Faqat harbiy qurollar'],
+    togriJavob: 1,
+    izoh: 'Londondagi Buyuk ko‘rgazma turli mamlakatlarning sanoat mahsulotlari, ixtirolari va texnologik yutuqlarini namoyish etgan.'
+  },
+  {
+    id: 1037,
+    sinf: 9,
+    bolim: 'jahon',
+    mavzu: 'Birinchi jahon urushi',
+    qiyinlik: 'orta',
+    savol: '1916-yilgi Somma jangida qaysi tomonlar o‘zaro jang qilgan?',
+    variantlar: ['A) Fransiya va Italiya', 'B) Buyuk Britaniya hamda Fransiya boshchiligidagi ittifoqchilar va Germaniya', 'C) Rossiya va Yaponiya'],
+    togriJavob: 1,
+    izoh: 'Somma jangi 1916-yilda G‘arbiy frontda Britaniya va Fransiya qo‘shinlarining Germaniyaga qarshi hujumi sifatida kechgan.'
+  },
+  {
+    id: 1038,
+    sinf: 9,
+    bolim: 'jahon',
+    mavzu: 'Ikkinchi jahon urushi',
+    qiyinlik: 'oson',
+    savol: 'Ikkinchi El-Alameyn jangi Ikkinchi jahon urushining qaysi hududidagi muhim janglardan biri bo‘lgan?',
+    variantlar: ['A) Shimoliy Afrika', 'B) Skandinaviya', 'C) Tinch okeanidagi orollar'],
+    togriJavob: 0,
+    izoh: '1942-yilda Misrda bo‘lib o‘tgan Ikkinchi El-Alameyn jangi Shimoliy Afrika frontida ittifoqchilar foydasiga muhim burilish yasagan.'
+  },
+  {
+    id: 1039,
+    sinf: 10,
+    bolim: 'jahon',
+    mavzu: 'Dekolonizatsiya',
+    qiyinlik: 'oson',
+    savol: 'Gana Buyuk Britaniyadan qaysi yilda mustaqillikka erishgan?',
+    variantlar: ['A) 1945-yilda', 'B) 1957-yilda', 'C) 1963-yilda'],
+    togriJavob: 1,
+    izoh: 'Gana 1957-yil 6-martda mustaqil bo‘lib, Sahroi Kabirdan janubdagi Afrikada mustamlaka boshqaruvidan ozod bo‘lgan ilk davlatlardan biri bo‘ldi.'
+  },
+  {
+    id: 1040,
+    sinf: 10,
+    bolim: 'jahon',
+    mavzu: 'Dekolonizatsiya',
+    qiyinlik: 'orta',
+    savol: 'Afrika Birligi Tashkiloti qaysi yilda tuzilgan?',
+    variantlar: ['A) 1957-yilda', 'B) 2002-yilda', 'C) 1963-yilda'],
+    togriJavob: 2,
+    izoh: 'Afrika Birligi Tashkiloti 1963-yilda Addis-Abebada tuzilgan; uning o‘rnida 2002-yilda Afrika Ittifoqi faoliyat boshlagan.'
   }
 )
+
+questions.push(...grade5SupplementalQuestions)
+questions.push(...grade5SupplementalQuestions2)
+questions.push(...grade6SupplementalQuestions)
+questions.push(...grade7SupplementalQuestions)
+questions.push(...additionalQuestions)
+questions.push(...additionalQuestions56)
+questions.push(...additionalQuestions78)
+questions.push(...additionalQuestions911)
 
 export const SINFLAR = [5, 6, 7, 8, 9, 10, 11];
 
@@ -4940,4 +5024,3 @@ export const MAVZULAR = {
     jahon: ["Zamonaviy dunyo", "Globallashuv", "Jahon xronologiyasi"]
   }
 };
-
